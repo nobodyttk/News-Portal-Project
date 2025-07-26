@@ -19,17 +19,17 @@ app.use((req, res, next) => {
     next();
 });
 
-// Rotas (MODIFICADAS/DESABILITADAS)
+// Rotas 
 app.get('/api/noticias', (req, res) => {
     res.status(200).json({
-        message: 'Esta é uma rota de exemplo para notícias. Funcionalidade de banco de dados desabilitada.',
+        message: 'Esta é uma rota de exemplo para notícias.',
         data: []
     });
 });
 
 app.get('/api/categorias', (req, res) => {
     res.status(200).json({
-        message: 'Esta é uma rota de exemplo para categorias. Funcionalidade de banco de dados desabilitada.',
+        message: 'Esta é uma rota de exemplo para categorias.',
         data: []
     });
 });
@@ -38,7 +38,7 @@ app.get('/api/categorias', (req, res) => {
 app.get('/api/health', (req, res) => {
     res.json({
         status: 'OK',
-        message: 'GameVicio API (modo demonstração) funcionando!',
+        message: ' API funcionando!',
         timestamp: new Date().toISOString(),
     });
 });
@@ -48,7 +48,7 @@ app.use((err, req, res, next) => {
     console.error('Erro:', err);
     res.status(500).json({
         error: 'Erro interno do servidor',
-        message: 'Erro interno do servidor (funcionalidade limitada para demonstração).',
+        message: 'Erro interno do servidor.',
     });
 });
 
