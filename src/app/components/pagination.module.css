@@ -1,0 +1,87 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: var(--hover-bg);
+  border-color: var(--accent-color, #dc2626);
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageButton.active {
+  background: var(--accent-color, #dc2626);
+  border-color: var(--accent-color, #dc2626);
+  color: white;
+}
+
+.navButton {
+  gap: 0.5rem;
+}
+
+.navText {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .navText {
+    display: inline;
+  }
+}
+
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .pagination {
+    gap: 0.25rem;
+  }
+
+  .pageButton {
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .dots {
+    width: 2rem;
+    height: 2rem;
+  }
+}

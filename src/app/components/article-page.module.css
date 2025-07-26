@@ -1,0 +1,357 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 3.5fr 1fr;
+    gap: 3rem;
+    padding: 2rem 3rem;
+  }
+}
+
+.content {
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    max-width: fit-content;
+  }
+}
+
+.article {
+  background: var(--card-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 4px #0000001a;
+}
+
+@media (min-width: 768px) {
+  .article {
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px 4px #0000001a;
+  }
+}
+
+.header {
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #dc2626;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .categoryBadge {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .meta {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.excerpt {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .excerpt {
+    font-size: 1.125rem;
+  }
+}
+
+.imageContainer {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .imageContainer {
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .imageContainer {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .imageContainer {
+    height: 500px;
+  }
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+.articleContent {
+  padding: 1.5rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .articleContent {
+    padding: 2rem;
+  }
+}
+
+.contentText {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contentText {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin: 0 0 1.25rem 0;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .paragraph {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin: 0 0 1.5rem 0;
+    text-align: justify;
+  }
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Novas Classes para Embeds de Mídia --- */
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporção de aspecto 16:9 (9 / 16 = 0.5625) */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.5rem; /* Espaçamento abaixo do vídeo */
+  background-color: var(--text-muted); /* Placeholder enquanto carrega */
+  border-radius: 0.5rem; /* Bordas arredondadas para o wrapper do vídeo */
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0.5rem; /* Para que o iframe tenha bordas arredondadas também */
+}
+
+.embeddedImageContainer {
+  margin-bottom: 1.5rem; /* Espaçamento abaixo da imagem incorporada */
+  width: 100%;
+  display: flex; /* Para centralizar a imagem se ela não preencher 100% */
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+  border-radius: 0.5rem; /* Bordas arredondadas para o contêiner da imagem */
+  box-shadow: 0 1px 3px 2px #0000001a; /* Sombra sutil para destacar a imagem */
+}
+
+.embeddedImage {
+  max-width: 100%; /* Garante que a imagem não transborde o contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove o espaço extra abaixo da imagem */
+  border-radius: 0.5rem; /* Bordas arredondadas para a imagem em si */
+  object-fit: contain; /* Garante que a imagem seja totalmente visível dentro do contêiner */
+  /* Se você usa layout="fill" no Next.js, pode precisar de object-fit: cover; */
+}
+
+/* --- Fim das Novas Classes para Embeds de Mídia --- */
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .sidebar {
+    order: 0;
+    box-shadow: 0 1px 3px 4px #0000001a;
+  }
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin: 0 0 1.25rem 0;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .paragraph {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin: 0 0 1.5rem 0;
+    text-align: justify;
+  }
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Novos estilos para Subtítulos --- */
+.subtitle {
+  font-size: 1.3rem; /* Tamanho da fonte desejado */
+  font-weight: bold; /* Peso da fonte para destaque */
+  color: var(--text-color); /* Use a cor do seu texto principal */
+  margin-top: 2rem; /* Espaçamento acima do subtítulo */
+  margin-bottom: 1rem; /* Espaçamento abaixo do subtítulo */
+  line-height: 1.3; /* Ajuste a altura da linha se necessário */
+  text-align: left; /* Alinhe à esquerda, ou justifique se preferir */
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.5rem; /* Ajuste o tamanho para telas maiores */
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+}
+/* --- Fim dos novos estilos para Subtítulos --- */
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.highlight {
+  font-weight: bold; /* Aplica o negrito */
+  /* Você pode adicionar outras propriedades, como color: var(--primary-color); para um destaque de cor */
+}
+.posterImageContainer {
+  display: flex; /* Para centralizar o pôster */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente (se o flex container tiver altura) */
+  margin: 1.5rem auto; /* Centraliza o contêiner e adiciona margem superior/inferior */
+  padding: 0.5rem; /* Um pequeno padding para a sombra não 'cortar' */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada para destaque */
+  max-width: 35%; /* Limite a largura máxima do contêiner */
+  /* Para mobile, podemos querer que ele seja maior */
+}
+
+@media (max-width: 767px) {
+  .posterImageContainer {
+    max-width: 60%; /* No mobile, o pôster pode ser um pouco maior para ser visível */
+    margin: 1rem auto; /* Ajuste a margem para mobile */
+  }
+}
+
+.posterImage {
+  width: 100%; /* A imagem preenche o max-width do container */
+  height: auto; /* Mantém a proporção */
+  display: block;
+  border-radius: 0.3rem; /* Bordas arredondadas para a imagem do pôster */
+  object-fit: contain; /* Garante que a imagem inteira seja visível */
+}

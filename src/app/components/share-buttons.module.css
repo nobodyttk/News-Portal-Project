@@ -1,0 +1,141 @@
+.container {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-top: 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    font-size: 1rem;
+  }
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .buttons {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  min-height: 44px; /* Minimum touch target size */
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+.button span {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .button span {
+    display: inline;
+  }
+}
+
+.facebook {
+  background: #1877f2;
+  color: white;
+}
+
+.facebook:hover {
+  background: #166fe5;
+  transform: translateY(-1px);
+}
+
+.twitter {
+  background: #1da1f2;
+  color: white;
+}
+
+.twitter:hover {
+  background: #1a91da;
+  transform: translateY(-1px);
+}
+
+.linkedin {
+  background: #0077b5;
+  color: white;
+}
+
+.linkedin:hover {
+  background: #006ba1;
+  transform: translateY(-1px);
+}
+
+.copy {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.copy:hover {
+  background: var(--hover-bg);
+  transform: translateY(-1px);
+}
+
+.copied {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .button:hover {
+    transform: none;
+  }
+
+  .button:active {
+    transform: scale(0.98);
+  }
+}

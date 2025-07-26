@@ -1,0 +1,128 @@
+.footer {
+  background-color: #18181b;
+  color: #e4e4e7;
+  padding: 2.5rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoGame {
+  background-color: #dc2626;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.logoVicio {
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.columnTitle {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin: 0 0 1rem 0;
+  color: #e4e4e7;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #dc2626;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  color: #a1a1aa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: #dc2626;
+}
+
+.bottom {
+  border-top: 1px solid #27272a;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

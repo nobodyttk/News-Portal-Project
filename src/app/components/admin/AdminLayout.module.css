@@ -1,0 +1,233 @@
+.container {
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+  position: relative;
+}
+
+.mobileMenuButton {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 40;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.mobileMenuButton:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.mobileMenuButton.hidden {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+@media (min-width: 1024px) {
+  .overlay {
+    display: none;
+  }
+}
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 50;
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.sidebarOpen {
+  transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    position: relative;
+    transform: translateX(0);
+    box-shadow: none;
+  }
+}
+
+.sidebarHeader {
+  padding: 2rem 1.5rem 1.5rem;
+  border-bottom: 1px solid #374151;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoGame {
+  background: #dc2626;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.logoVicio {
+  background: #000;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.adminText {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.closeMobile {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.2s;
+}
+
+.closeMobile:hover {
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .closeMobile {
+    display: none;
+  }
+}
+
+.navigation {
+  flex: 1;
+  padding: 1.5rem 0;
+  overflow-y: auto;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  margin-bottom: 0.25rem;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.menuLink:hover {
+  background: rgba(220, 38, 38, 0.1);
+  color: white;
+  border-left-color: #dc2626;
+}
+
+.menuLink:focus {
+  outline: none;
+  background: rgba(220, 38, 38, 0.1);
+  color: white;
+  border-left-color: #dc2626;
+}
+
+.sidebarFooter {
+  padding: 1.5rem;
+  border-top: 1px solid #374151;
+}
+
+.backToSite {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  border: 1px solid #374151;
+}
+
+.backToSite:hover {
+  background: #374151;
+  color: white;
+  border-color: #4b5563;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    margin-left: 0;
+  }
+}
+
+.contentWrapper {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .contentWrapper {
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+}

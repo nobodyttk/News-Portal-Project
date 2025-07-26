@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+}
+
+.content {
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .content {
+    max-width: 500px;
+  }
+}
+
+.errorCode {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .errorCode {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .errorCode {
+    font-size: 6rem;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .description {
+    font-size: 1.125rem;
+    padding: 0;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.homeButton,
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  min-height: 44px; /* Minimum touch target size */
+}
+
+@media (min-width: 640px) {
+  .homeButton,
+  .backButton {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+.homeButton {
+  background: #dc2626;
+  color: white;
+  border: none;
+}
+
+.homeButton:hover {
+  background: #b91c1c;
+}
+
+.backButton {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.backButton:hover {
+  background: var(--hover-bg);
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .homeButton:hover,
+  .backButton:hover {
+    transform: none;
+  }
+
+  .homeButton:active,
+  .backButton:active {
+    transform: scale(0.98);
+  }
+}

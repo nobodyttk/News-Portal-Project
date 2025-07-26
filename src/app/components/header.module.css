@@ -1,0 +1,243 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(var(--background-rgb), 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+}
+
+.menuButton:hover {
+  background-color: var(--hover-bg);
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoGame {
+  background-color: #dc2626;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.logoVicio {
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #dc2626;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Atualizar os estilos para a funcionalidade de busca */
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchContainer form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.searchInput {
+  width: 200px;
+  height: 2rem;
+  padding: 0 2.5rem 0 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+}
+
+.searchButton {
+  position: absolute;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton:hover {
+  background-color: var(--hover-bg);
+}
+
+.mobileMenu {
+  border-top: 1px solid var(--border-color);
+  padding: 1rem;
+  background: var(--background-color);
+}
+
+/* Estilos para busca no menu mobile */
+.mobileSearchForm {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.mobileSearchContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.mobileSearchIcon {
+  position: absolute;
+  left: 0.75rem;
+  color: var(--text-muted);
+}
+
+.mobileSearchInput {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 0.75rem 0 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+
+.mobileSearchInput:focus {
+  outline: none;
+  border-color: #dc2626;
+}
+
+.mobileSearchButton {
+  position: absolute;
+  right: 0.5rem;
+  background: #dc2626;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.mobileSearchButton:hover {
+  background: #b91c1c;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobileNavLink {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.mobileNavLink:hover {
+  color: #dc2626;
+}
+
+.mobileOnly {
+  display: block;
+}
+
+.desktopOnly {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobileOnly {
+    display: none;
+  }
+
+  .desktopOnly {
+    display: flex;
+  }
+}
