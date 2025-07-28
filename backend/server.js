@@ -1,45 +1,42 @@
+// server-example.js
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const http = require('http');
-require('dotenv').config();
 
+// Inicialização do aplicativo Express
 const app = express();
-const port = 3000;
+const port = 3000; // Porta padrão para demonstração
 const server = http.createServer(app);
 
 // Middleware
-app.use(cors());
-app.use(bodyParser.json({ limit: '10mb' }));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors()); // Habilita CORS para requisições cross-origin
+app.use(bodyParser.json({ limit: '10mb' })); // Suporte para JSON
+app.use(bodyParser.urlencoded({ extended: true })); // Suporte para formulários
 
-// Middleware para injetar conexão do banco nas rotas 
+// Middleware de exemplo para simular injeção de dependências
 app.use((req, res, next) => {
-    console.log('Middleware de DB: Conexão com o banco desabilitada para este exemplo.');
+    // Simula uma conexão com banco de dados (omitida para demonstração)
+    console.log('Middleware: Simulação de conexão com banco de dados.');
+    req.db = { example: 'Conexão fictícia para demonstração' };
     next();
 });
 
-// Rotas 
-app.get('/api/noticias', (req, res) => {
+// Rotas de exemplo
+app.get('/api/exemplo', (req, res) => {
     res.status(200).json({
-        message: 'Esta é uma rota de exemplo para notícias.',
-        data: []
-    });
-});
-
-app.get('/api/categorias', (req, res) => {
-    res.status(200).json({
-        message: 'Esta é uma rota de exemplo para categorias.',
-        data: []
+        message: 'Rota de exemplo para demonstrar a API.',
+        data: [{ id: 1, nome: 'Exemplo de Item' }],
+        dbStatus: req.db.example // Demonstra uso do middleware
     });
 });
 
 // Health check
 app.get('/api/health', (req, res) => {
-    res.json({
+    res.status(200).json({
         status: 'OK',
-        message: ' API funcionando!',
-        timestamp: new Date().toISOString(),
+        message: 'API funcionando corretamente (modo demonstração).',
+        timestamp: new Date().toISOString()
     });
 });
 
@@ -48,15 +45,15 @@ app.use((err, req, res, next) => {
     console.error('Erro:', err);
     res.status(500).json({
         error: 'Erro interno do servidor',
-        message: 'Erro interno do servidor.',
+        message: 'Ocorreu um erro no servidor (modo demonstração).'
     });
 });
 
-// Middleware para rota não encontrada
+// Middleware para rotas não encontradas
 app.use((req, res) => {
     res.status(404).json({
         error: 'Rota não encontrada',
-        message: `A rota ${req.originalUrl} não existe (modo demonstração).`,
+        message: `A rota ${req.originalUrl} não existe (modo demonstração).`
     });
 });
 
@@ -64,5 +61,5 @@ app.use((req, res) => {
 server.listen(port, () => {
     console.log(`🚀 Servidor rodando na porta ${port} (modo demonstração)`);
     console.log(`📊 API disponível em http://localhost:${port}/api`);
-    console.log(`⚠️  Funcionalidades de banco de dados e rotas específicas estão desabilitadas.`);
+    
 });
