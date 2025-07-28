@@ -1,127 +1,106 @@
-# News Portal Project
+# NEWS-PORTAL-PROJECT
 
-A news portal project built with the latest technologies to deliver an impeccable user experience and modern design. Developed with **Next.js** and **React**, this project has been architected to be fast, responsive, and visually appealing.
+*Stay Informed, Lead the Future of News*
 
-## Key Features
+![last commit](https://img.shields.io/badge/last%20commit-last%20saturday-blue)
+![javascript](https://img.shields.io/badge/javascript-67.2%25-yellow)
+![languages](https://img.shields.io/badge/languages-2-blue)
 
-* **Modern and Responsive Design:** Intuitive layout that adapts perfectly to any device.
-* **Optimized Performance:** Fast page loading and smooth navigation experience, thanks to Next.js.
-* **React Development:** Reusable components for clean and scalable code architecture.
-* **Optimized Fonts:** Uses `next/font` for efficient loading of the [Geist](https://vercel.com/font) font, ensuring consistent and high-quality typography.
-* **Clean Project Structure:** Easy to understand and contribute to.
+*Built with the tools and technologies:*
 
----
+![Express](https://img.shields.io/badge/Express-black?logo=express)
+![JSON](https://img.shields.io/badge/JSON-gray?logo=json)
+![Markdown](https://img.shields.io/badge/Markdown-black?logo=markdown)
+![npm](https://img.shields.io/badge/npm-red?logo=npm)
+![ENV](https://img.shields.io/badge/ENV-yellow)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow?logo=javascript)
+![Node.js](https://img.shields.io/badge/Node.js-green?logo=node.js)
+![React](https://img.shields.io/badge/React-blue?logo=react)
+![Axios](https://img.shields.io/badge/Axios-purple)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Testing](#testing)
+
+## Overview
+
+News-Portal-Project is a comprehensive Next.js-based platform designed for delivering dynamic news and entertainment content with high performance and scalability. It combines a modular architecture with powerful features to streamline development and enhance user experience.
+
+### Why News-Portal-Project?
+
+This project aims to simplify the creation of modern news websites with a focus on performance, maintainability, and user engagement. The core features include:
+
+- ⚡ **Modular Components**: Reusable, organized React components for headers, footers, news listings, and more.
+
+- 🚀 **Dynamic Content**: Fetches and displays real-time news, entertainment, and otaku content with server-side rendering.
+
+- 🔧 **Admin Interface**: Manage news articles, categories, and authors efficiently through a built-in admin panel.
+
+- 🔍 **SEO Optimization**: Supports dynamic metadata and optimized images for better search visibility.
+
+- 🔗 **API Integration**: Robust backend routes for content management and data retrieval.
+
+- 🎨 **Theming & Engagement**: Theme toggles, share buttons, comments, and user-friendly navigation.
 
 ## Getting Started
 
-These instructions will help you set up and run the project on your local machine for development and testing purposes.
-
 ### Prerequisites
 
-Make sure you have the following tools installed:
+This project requires the following dependencies:
 
-* Node.js (version 18.x or higher recommended)
-* npm, Yarn, pnpm, or Bun
+- **Programming Language**: JavaScript
+- **Package Manager**: Npm
 
 ### Installation
 
-1. Install the project dependencies:
+Build News-Portal-Project from the source and install dependencies:
 
-    \`\`\`bash
-    npm install
-    # or
-    yarn install
-    # or
-    pnpm install
-    # or
-    bun install
-    \`\`\`
+1. **Clone the repository:**
 
-### Running the Development Server
+```bash
+git clone https://github.com/nobodyttk/News-Portal-Project
+```
 
-To start the development server, run one of the following commands:
+2. **Navigate to the project directory:**
 
-\`\`\`bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-\`\`\`
+```bash
+cd News-Portal-Project
+```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Install the dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Using **npm**:
 
-## Learn More
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run the project with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Using **npm**:
 
-## Deploy on Vercel
+```bash
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Testing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+News-portal-project uses the **test_framework** test framework. Run the test suite with:
 
-====================================================================================================================================================================================================================
+Using **npm**:
 
-## Pt-Br
-
-Um projeto de portal de notícias construído com as tecnologias mais recentes para oferecer uma experiência de usuário impecável e um design moderno. Desenvolvido com **Next.js** e **React**, este projeto foi arquitetado para ser rápido, responsivo e visualmente atraente.
-
-## Recursos Principais
-
-* **Design Moderno e Responsivo:** Layout intuitivo que se adapta perfeitamente a qualquer dispositivo.
-* **Performance Otimizada:** Carregamento rápido de páginas e experiência de navegação fluida, graças ao Next.js.
-* **Desenvolvimento com React:** Componentes reutilizáveis para uma arquitetura de código limpa e escalável.
-* **Fontes Otimizadas:** Utiliza `next/font` para um carregamento eficiente da fonte [Geist](https://vercel.com/font), garantindo uma tipografia consistente e de alta qualidade.
-* **Estrutura de Projeto Limpa:** Fácil de entender e de contribuir.
+```bash
+npm test
+```
 
 ---
 
-## Começando (Getting Started)
-
-Estas instruções ajudarão você a configurar e executar o projeto em sua máquina local para fins de desenvolvimento e teste.
-
-### Pré-requisitos
-
-Certifique-se de ter as seguintes ferramentas instaladas:
-
-* Node.js (versão 18.x ou superior recomendada)
-* npm, Yarn, pnpm ou Bun
-
-### Instalação
-
-
-
-1.  Instale as dependências do projeto:
-
-    ```bash
-    npm install
-    # ou
-    yarn install
-    # ou
-    pnpm install
-    # ou
-    bun install
-    ```
-
-### Rodando o Servidor de Desenvolvimento
-
-Para iniciar o servidor de desenvolvimento, execute um dos seguintes comandos:
-
-```bash
-npm run dev
-# ou
-yarn dev
-# ou
-pnpm dev
-# ou
-bun dev
+[🔙 Return](#news-portal-project)
+```
